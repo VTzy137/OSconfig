@@ -1,0 +1,76 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1051,
+       "width": 1920,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "jdholtz/i3-restore: A simple Bash and Python script to restore your i3 session — Mozilla Firefox",
+    "percent": 0.333333333333333,
+    "swallows": [
+       {
+       "class": "^firefox$",
+       "instance": "^Navigator$",
+       "machine": "^vtzy\\-Lenovo\\-Legion\\-7\\-15IMH05$",
+       "title": "^jdholtz\\/i3\\-restore\\:\\ A\\ simple\\ Bash\\ and\\ Python\\ script\\ to\\ restore\\ your\\ i3\\ session\\ \\—\\ Mozilla\\ Firefox$",
+       "window_role": "^browser$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 581,
+       "width": 896,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [
+       "_i3_restore_focus"
+    ],
+    "name": "./i3-save",
+    "percent": 0.333333333333333,
+    "swallows": [
+       {
+       "class": "^Gnome\\-terminal$",
+       "instance": "^gnome\\-terminal\\-server$",
+       "machine": "^vtzy\\-Lenovo\\-Legion\\-7\\-15IMH05$",
+       "title": "^\\.\\/i3\\-save$",
+       "window_role": "^gnome\\-terminal\\-window\\-dd992c23\\-ba2e\\-400e\\-8960\\-9d21fcf04eaa$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 581,
+       "width": 896,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "vtzy@vtzy-Lenovo-Legion-7-15IMH05:~",
+    "percent": 0.333333333333333,
+    "swallows": [
+       {
+       "class": "^Gnome\\-terminal$",
+       "instance": "^gnome\\-terminal\\-server$",
+       "machine": "^vtzy\\-Lenovo\\-Legion\\-7\\-15IMH05$",
+       "title": "^vtzy\\@vtzy\\-Lenovo\\-Legion\\-7\\-15IMH05\\:\\~$",
+       "window_role": "^gnome\\-terminal\\-window\\-77eafb14\\-97a2\\-4898\\-8e34\\-7288bb4f17e5$"
+       }
+    ],
+    "type": "con"
+}

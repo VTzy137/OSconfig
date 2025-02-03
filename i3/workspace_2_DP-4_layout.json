@@ -1,0 +1,24 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1051,
+       "width": 1190,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "App.vue - Documents - Visual Studio Code",
+    "percent": 1,
+    "swallows": [
+       {
+       "class": "^Code$",
+       "instance": "^code$",
+       "machine": "^vtzy\\-Lenovo\\-Legion\\-7\\-15IMH05$",
+       "title": "^App\\.vue\\ \\-\\ Documents\\ \\-\\ Visual\\ Studio\\ Code$",
+       "window_role": "^browser\\-window$"
+       }
+    ],
+    "type": "con"
+}
