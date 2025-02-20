@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 alpha='99'
 beta='80'
 background='#282a36'
