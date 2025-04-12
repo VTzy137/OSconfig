@@ -24,3 +24,17 @@ Enhance code speed and quality
 
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Chrome](https://www.google.com/chrome/)
+
+
+
+## Addition
+
+- gedit
+- htop
+- ibus
+- nautilus
+- neofetch 
+- polybar
+- rofi
+- thunar
+- wlogout
