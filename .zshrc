@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,6 +15,15 @@ export ZSH=~/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="pixegami-agnoster"
+preexec() {
+  SECONDS=0
+}
+RPROMPT='$(if (( SECONDS > 5 )); then print -n "%F{green}${SECONDS}s%f  "; fi)%F{yellow} %*%f'
+
+
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
+# # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -108,7 +124,7 @@ bindkey '^N' _history-complete-newer   # Ctrl+N for newer history
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-export SCRIPT_DIR="$HOME/.config/i3blocks/i3blocks/scripts"
+# export SCRIPT_DIR="$HOME/.config/i3blocks/i3blocks/scripts"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -126,6 +142,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export SCRIPT_DIR="$HOME/.config/i3blocks/i3blocks/scripts"
+
+export CMAKE_ROOT="/usr/share/cmake-3.28"
 
 # export JAVA_HOME=/usr/local/jdk-17.0.12
 export JAVA_HOME=/usr/local/jdk-23.0.1
@@ -148,32 +166,25 @@ eval "$(pyenv virtualenv-init -)"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export GTK_USE_PORTAL=1
 
+export PATH="$HOME/.local/bin:$PATH"
+export CC=/usr/bin/clang
+
+alias sephera="~/.config/sephera"
+alias sepheraLoc="~/.config/sephera loc --path ./"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias showneo="neofetch --ascii_colors 6 7 --colors 2 2 2 2"
 alias dororo="ascii-image-converter ~/Pictures/wallpaper/wp4931880-dororo-kawaii-wallpapers.jpg -bC"
 alias kubectl="minikube kubectl --"
-alias athenix='cd ~/Documents/athenix/athenix-recom-shopify'
-alias config='nvim ~/.config'
 alias zshrc='nvim ~/.zshrc'
-alias i3cf='nvim ~/.config/i3/config' 
+alias i3cf='nvim ~/.config/i3/config'
+alias cursor-ai='/opt/cursor-ai/AppRun --no-sandbox' 
+alias rppimp= "/opt/cursor-ai/AppRun --no-sandbox ~/Documents/RPP-imp"
+alias cdathenix='cd ~/Documents/athenix/athenix-recom-shopify'
+alias atheshopfify= "/opt/cursor-ai/AppRun --no-sandbox ~/Documents/athenix/athenix-recom-shopify"
 alias q='exit'
+alias devshopify='cdathenix && shopify app dev --config truong'
+
+source ~/scripts/gitCommand.sh
 
 
-pr() {
-  if [[ $# -lt 2 || $# -gt 3 ]]; then
-    echo "Usage: pr <base-branch> <head-branch> [body]"
-    return 1
-  fi
-  local commit_title=$(git log -1 --pretty=%s)
-  local commit_body="${3:-$(git log -1 --pretty=%b)}"
-  gh pr create --base "$1" --head "$2" --title "$commit_title" --body "$commit_body"
-}
 
-check_conflix() {
-  BRANCH=$1
-  git fetch origin $BRANCH
-  BASE=$(git merge-base HEAD origin/$BRANCH)
-  git merge-tree $BASE HEAD origin/$BRANCH | grep -q '<<<<<<<' && \
-  echo "❌ Conflict detected!" || \
-  echo "✅ No conflict"
-}

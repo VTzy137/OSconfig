@@ -125,7 +125,6 @@ export SCRIPT_DIR="$HOME/.config/i3blocks/i3blocks/scripts"
 export JAVA_HOME=/usr/local/jdk-23.0.1
 export PATH=$JAVA_HOME/bin:$PATH
 
-
-
-
 . "$HOME/.cargo/env"
+
+

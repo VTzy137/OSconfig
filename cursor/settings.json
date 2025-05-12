@@ -259,22 +259,56 @@
     "vs-kubernetes": {
         "vscode-kubernetes.helm-path-linux": "/home/vtzy/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
         "vscode-kubernetes.minikube-path-linux": "/home/vtzy/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube",
-        "vs-kubernetes.minikube-show-information-expiration": "2025-04-07T16:17:17.687Z"
+        "vs-kubernetes.minikube-show-information-expiration": "2025-05-23T19:16:15.525Z"
     },
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
     },
     "[vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "clang-format.executable": "/usr/bin/clang-format",
+    "[liquid]": {
+        "editor.defaultFormatter": "sissel.shopify-liquid",
+        "editor.formatOnSave": false
+    },
+    "liquid.config.baseDir": ".",
+    "liquid.config.method": "liquidrc",
+    "liquid.completion.tags": true,
+    "liquid.completion.objects": true,
+    "liquid.completion.filters": true,
+    "liquid.completion.operators": true,
+    "liquid.completion.schema": true,
+    "liquid.validate.schema": true,
+    "liquid.hover.tags": true,
+    "liquid.hover.filters": true,
+    "liquid.hover.objects": true,
+    "liquid.hover.schema": true,
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "jupyter.askForKernelRestart": false,
+    "notebook.editorOptionsCustomizations": {
+        "editor.tabSize": 2,
+        "editor.indentSize": 2,
+        "editor.insertSpaces": true
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
     "explorer.confirmDelete": false,
-    "breadcrumbs.enabled": false,
     "editor.wordWrap": "on",
     "editor.glyphMargin": false,
-    "editor.fontFamily": "'Fira Code', 'monospace', monospace",
+    // "editor.fontFamily": "'Fira Code', 'monospace', monospace",
     "editor.fontWeight": "440",
     "editor.fontLigatures": true,
-    "workbench.productIconTheme": "icons-carbon",
     "github.copilot.enable": {
         "*": true,
         "plaintext": true,
@@ -286,31 +320,23 @@
     "editor.showFoldingControls": "never",
     "csv-preview.lineNumbers": "source",
     "window.menuBarVisibility": "toggle",
-    "jupyter.askForKernelRestart": false,
-    "notebook.editorOptionsCustomizations": {
-        "editor.tabSize": 2,
-        "editor.indentSize": 2,
-        "editor.insertSpaces": true
-    },
     "editor.tabSize": 2,
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.unicodeHighlight.invisibleCharacters": false,
-    "tabnine.experimentalAutoImports": true,
     "workbench.iconTheme": "material-icon-theme",
     "material-icon-theme.hidesExplorerArrows": true,
     "window.titleBarStyle": "native",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "diffEditor.hideUnchangedRegions.enabled": true,
-    "[liquid]": {
-        "editor.defaultFormatter": "sissel.shopify-liquid"
-    },
-    "[cpp]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
-    },
-    "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.configPath": "/home/vtzy/Documents/.vscode/.prettierrc",
-    "prettier.requireConfig": true
+    "prettier.requireConfig": true,
+    "code-runner.runInTerminal": true,
+    // "vscode-pets.theme": "forest",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "/bin/zsh"
+        }
+    },
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "editor.fontFamily": "MesloLGS NF, monospace"
 }
